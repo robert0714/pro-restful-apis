@@ -11,4 +11,5 @@ public interface PodcastService {
     public void updatePodcast(int id, Podcast update);
     public void deletePodcast(int id);
     public List<Podcast> getPodcasts(String title);
+    public List<Podcast>  getAll();
 }

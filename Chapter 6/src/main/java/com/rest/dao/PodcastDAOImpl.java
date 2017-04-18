@@ -9,12 +9,14 @@ import javax.persistence.Query;
 
 import javax.ws.rs.core.Response;
 
+import org.springframework.stereotype.Repository;
+
 import com.rest.domain.Podcast;
 
 import com.rest.exception.ErrorMessage;
 import com.rest.exception.NotFoundException;
 
-
+@Repository
 public class PodcastDAOImpl implements PodcastDAO {
 	 private static final String PERSISTENCE_UNIT_NAME = "Podcast";
      private static EntityManagerFactory factory;

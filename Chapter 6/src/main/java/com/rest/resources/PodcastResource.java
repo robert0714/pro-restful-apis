@@ -34,7 +34,14 @@ public class PodcastResource {
         podcastService.createPodcast(podcast);
         return podcast;
     }
-   
+    @GET
+    @Consumes("application/json")
+    @Produces("application/json")
+    public List<Podcast> getAll() {
+         
+    	List<Podcast> podcastList =  podcastService.getAll();
+        return podcastList;
+    }
   
     @GET
     @Path("{id}")
@@ -45,13 +52,13 @@ public class PodcastResource {
        return podcast;
     }
      
-    @GET
-    @Consumes("application/json")
-    @Produces("application/json")
-    public List<Podcast> getPodcasts(@QueryParam("title") String title) {
-      List<Podcast> podcasts = podcastService.getPodcasts(title);
-       return podcasts;
-    }
+//    @GET
+//    @Consumes("application/json")
+//    @Produces("application/json")
+//    public List<Podcast> getPodcasts(@QueryParam("title") String title) {
+//      List<Podcast> podcasts = podcastService.getPodcasts(title);
+//       return podcasts;
+//    }
   
     @PUT
     @Path("{id}")
