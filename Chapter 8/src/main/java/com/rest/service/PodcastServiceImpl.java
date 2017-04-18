@@ -22,7 +22,7 @@ public class PodcastServiceImpl implements PodcastService {
     public Podcast getPodcast(int id) throws NotFoundException {
         Podcast podcast = podcastDB.get(id);
         if (podcast == null) {
-             ErrorMessage errorMessage = new ErrorMessage("1001", "Podcast not found!", "http://localhost:8080/lab3/error.jsp", Response.Status.NOT_FOUND);
+             ErrorMessage errorMessage = new ErrorMessage("1001", "Podcast not found!", "http://localhost:8080/lab8/error.jsp", Response.Status.NOT_FOUND);
               
              throw new NotFoundException(errorMessage);
           }

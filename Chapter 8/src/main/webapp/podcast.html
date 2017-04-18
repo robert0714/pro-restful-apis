@@ -22,7 +22,7 @@ var app = angular.module('app', []);
 	    	$scope.podcast = {};
 	    	
 	    	$scope.getPodcasts = function() {             
-		        url = "http://localhost:8080/lab7/rest/podcasts";
+		        url = "http://localhost:8080/lab8/rest/podcasts";
 		        $http({method: 'GET', url: url}).
 		              success(function(data, status, headers, config) {
 		                   $scope.podcastsList = data;
@@ -38,7 +38,7 @@ VIEW PODCAST
 	    	
 	    	$scope.viewPodcast = function(id) {
 	    	    
-	    	    		url = "http://localhost:8080/lab7/rest/podcasts/" + id ;
+	    	    		url = "http://localhost:8080/lab8/rest/podcasts/" + id ;
 	    	    		console.log(url);
 	    	    		$http({method: 'GET', url: url}).
 	    	    		success(function(data, status, headers, config) {
@@ -55,7 +55,7 @@ DELETE PODCAST
 
 	    	$scope.deletePodcast = function(id) {
 	    	    
-	    		url = "http://localhost:8080/lab7/rest/podcasts/" + id ;
+	    		url = "http://localhost:8080/lab8/rest/podcasts/" + id ;
 	    		console.log(url);
 	    		$http({method: 'DELETE', url: url}).
 	    		success(function(data, status, headers, config) {
@@ -73,7 +73,7 @@ DELETE PODCAST
 	    	$scope.submitForm = function(){
 	    		$http({
 	    	          method  : 'POST',
-	    	          url     : 'http://localhost:8080/lab7/rest/podcasts',
+	    	          url     : 'http://localhost:8080/lab8/rest/podcasts',
 	    	          data    : $scope.podcast, //forms podcast object
 	    	          headers : {'Content-Type': 'application/json'} 
 	    	         }).
@@ -91,7 +91,7 @@ UPDATE PODCAST
 	    	$scope.updatePodcast = function(id){
 	    		$http({
 	    	          method  : 'PUT',
-	    	          url     : 'http://localhost:8080/lab7/rest/podcasts/' + id,
+	    	          url     : 'http://localhost:8080/lab8/rest/podcasts/' + id,
 	    	          data    : $scope.podcast, //forms podcast object
 	    	          headers : {'Content-Type': 'application/json'} 
 	    	         }).
@@ -107,7 +107,7 @@ UPDATE PODCAST
 SEARCH PODCAST
 
 	    	$scope.searchPodcast = function(){
-	    		url = "http://localhost:8080/lab7/rest/podcasts/search?title=" + $scope.searchVal;
+	    		url = "http://localhost:8080/lab8/rest/podcasts/search?title=" + $scope.searchVal;
 	    		console.log(url);
 	    		$http({method: 'GET', url: url}).
 	    		success(function(data, status, headers, config) {

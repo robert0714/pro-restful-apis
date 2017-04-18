@@ -12,7 +12,7 @@
   
  <!-- Stateless RESTful services use BASIC authentication -->
     <security:http create-session="stateless">
-        <security:intercept-url pattern="/rest/**" access="ROLE_REST_DEMO"/>
+        <security:intercept-url pattern="/rest/**" access="hasRole('ROLE_REST_DEMO')"/>
         <security:http-basic/>
     </security:http>
     <security:authentication-manager>
