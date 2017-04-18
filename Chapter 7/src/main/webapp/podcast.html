@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
   <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-resource.js"></script>
  </head>
     <meta charset="utf-8">
     <title>Podcast App</title>
@@ -17,7 +17,8 @@
 
 <script>
 var app = angular.module('app', []);
-	    
+//angular.module('ng').filter('tel', function (){});
+
 	    angular.module('app').controller("PodcastController",['$scope', '$http', '$window', function($scope, $http, $window){
 	    	$scope.podcast = {};
 	    	
@@ -33,7 +34,7 @@ var app = angular.module('app', []);
 		              });
 		    };
 		    
-VIEW PODCAST
+//VIEW PODCAST
 
 	    	
 	    	$scope.viewPodcast = function(id) {
@@ -51,7 +52,7 @@ VIEW PODCAST
 	    	    		
 	    	    		
 	         }
-DELETE PODCAST
+//DELETE PODCAST;
 
 	    	$scope.deletePodcast = function(id) {
 	    	    
@@ -86,7 +87,7 @@ DELETE PODCAST
 	 	    		});
 	    		$window.location.reload();
 	    	}
-UPDATE PODCAST
+//UPDATE PODCAST;
 
 	    	$scope.updatePodcast = function(id){
 	    		$http({
@@ -104,7 +105,7 @@ UPDATE PODCAST
 	 	    		});
 	    		$window.location.reload();
 	    	}
-SEARCH PODCAST
+//SEARCH PODCAST;
 
 	    	$scope.searchPodcast = function(){
 	    		url = "http://localhost:8080/lab7/rest/podcasts/search?title=" + $scope.searchVal;

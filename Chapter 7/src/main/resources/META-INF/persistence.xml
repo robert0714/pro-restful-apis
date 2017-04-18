@@ -7,7 +7,7 @@
           <properties>
                <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
                <property name="javax.persistence.jdbc.url"
-                    value="jdbc:mysql://ed4core.com:3306/rest_demo" />
+                    value="jdbc:mysql://200.200.200.201:3306/rest_demo" />
                <property name="javax.persistence.jdbc.user" value="rest_demo" />
                <property name="javax.persistence.jdbc.password" value="rest_demo" />
 
